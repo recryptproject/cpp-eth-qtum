@@ -31,8 +31,8 @@ using namespace dev;
 #include "genesis/eip158Test.cpp"
 #include "genesis/metropolisTest.cpp"
 #include "genesis/transitionnetTest.cpp"
-#include "genesis/qtumMainNetwork.cpp"
-#include "genesis/qtumTestNetwork.cpp"
+#include "genesis/recryptMainNetwork.cpp"
+#include "genesis/recryptTestNetwork.cpp"
 
 std::string const& dev::eth::genesisInfo(Network _n)
 {
@@ -47,8 +47,8 @@ std::string const& dev::eth::genesisInfo(Network _n)
 	case Network::EIP150Test: return c_genesisInfoEIP150Test;
 	case Network::EIP158Test: return c_genesisInfoEIP158Test;
 	case Network::MetropolisTest: return c_genesisInfoMetropolisTest;
-	case Network::qtumMainNetwork: return c_genesisInfoQtumMainNetwork;
-	case Network::qtumTestNetwork: return c_genesisInfoQtumTestNetwork;
+	case Network::recryptMainNetwork: return c_genesisInfoRecryptMainNetwork;
+	case Network::recryptTestNetwork: return c_genesisInfoRecryptTestNetwork;
 	default:
 		throw std::invalid_argument("Invalid network value");
 	}
@@ -67,8 +67,8 @@ h256 const& dev::eth::genesisStateRoot(Network _n)
 	case Network::EIP150Test: return c_genesisStateRootEIP150Test;
 	case Network::EIP158Test: return c_genesisStateRootEIP158Test;
 	case Network::MetropolisTest: return c_genesisStateRootMetropolisTest;
-	case Network::qtumMainNetwork: return c_genesisStateRootQtumMainNetwork;
-	case Network::qtumTestNetwork: return c_genesisStateRootQtumTestNetwork;
+	case Network::recryptMainNetwork: return c_genesisStateRootRecryptMainNetwork;
+	case Network::recryptTestNetwork: return c_genesisStateRootRecryptTestNetwork;
 	default:
 		throw std::invalid_argument("Invalid network value");
 	}
